@@ -1,0 +1,17 @@
+El procesador debe mantener en nPC el valor de nPC + 4. De este modo
+se evita la generacion de un retraso de dos ciclos de reloj en el 
+valor del PC.
+
+El PC debe tenerse en cuenta para la demas lógica de saltos.
+
+La unidad de control es asíncrona.
+
+la salida del PSRModifier se conecta directamente a la Unidad de control. Se mantiene el PSR.
+
+El register file es asíncrono.
+
+NOTA:
+Se presenta un problema de escritura indebida en el registerFile cuando el writeEnable cambia a 1,
+se está escribiendo inmediatamente el dataOut al RF donde esté indicando rd.
+
+La instrucción nop que se implementa no realiza habilitacion de escritura en el RF.

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="registerFile">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2013-5-24T16:36:1</timestamp>
+    <pin polarity="Input" x="0" y="-416" name="clkFPGA" />
+    <pin polarity="Input" x="0" y="-352" name="reset" />
+    <pin polarity="Input" x="0" y="-288" name="writeEnable" />
+    <pin polarity="Input" x="0" y="-224" name="registerSource1(5:0)" />
+    <pin polarity="Input" x="0" y="-160" name="registerSource2(5:0)" />
+    <pin polarity="Input" x="0" y="-96" name="registerDestination(5:0)" />
+    <pin polarity="Input" x="0" y="-32" name="dataToWrite(31:0)" />
+    <pin polarity="Output" x="704" y="-416" name="contentRegisterSource1(31:0)" />
+    <pin polarity="Output" x="704" y="-224" name="contentRegisterSource2(31:0)" />
+    <pin polarity="Output" x="704" y="-32" name="contentRegisterDestination(31:0)" />
+    <graph>
+        <rect width="576" x="64" y="-448" height="448" />
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="352" y="-456" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-416" type="pin clkFPGA" />
+        <line x2="0" y1="-416" y2="-416" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-352" type="pin reset" />
+        <line x2="0" y1="-352" y2="-352" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-288" type="pin writeEnable" />
+        <line x2="0" y1="-288" y2="-288" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin registerSource1(5:0)" />
+        <rect width="64" x="0" y="-236" height="24" />
+        <line x2="0" y1="-224" y2="-224" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-160" type="pin registerSource2(5:0)" />
+        <rect width="64" x="0" y="-172" height="24" />
+        <line x2="0" y1="-160" y2="-160" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-96" type="pin registerDestination(5:0)" />
+        <rect width="64" x="0" y="-108" height="24" />
+        <line x2="0" y1="-96" y2="-96" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin dataToWrite(31:0)" />
+        <rect width="64" x="0" y="-44" height="24" />
+        <line x2="0" y1="-32" y2="-32" x1="64" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="632" y="-416" type="pin contentRegisterSource1(31:0)" />
+        <rect width="64" x="640" y="-428" height="24" />
+        <line x2="704" y1="-416" y2="-416" x1="640" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="632" y="-224" type="pin contentRegisterSource2(31:0)" />
+        <rect width="64" x="640" y="-236" height="24" />
+        <line x2="704" y1="-224" y2="-224" x1="640" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="632" y="-32" type="pin contentRegisterDestination(31:0)" />
+        <rect width="64" x="640" y="-44" height="24" />
+        <line x2="704" y1="-32" y2="-32" x1="640" />
+    </graph>
+</symbol>

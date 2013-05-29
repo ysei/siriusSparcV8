@@ -1,0 +1,1 @@
+vhdtdtfi -prj sparcProcessorMonocycle -o /home/john/Dropbox/Arquitectura/sparcProcessorMonocycle/muxPCSource.vhi -module muxPCSource -template /home/john/iseInstallDir/14.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work muxPCSource.vhd 

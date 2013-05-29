@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/john/Dropbox/Arquitectura/sparcProcessorMonocycle/tbSparcV8_isim_beh.exe" -prj "/home/john/Dropbox/Arquitectura/sparcProcessorMonocycle/tbSparcV8_beh.prj" "work.tbSparcV8" 
