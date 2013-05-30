@@ -10,6 +10,8 @@ la salida del PSRModifier se conecta directamente a la Unidad de control. Se man
 
 El register file es asíncrono.
 
+Los save y restore funcionan correctamente, sin embargo se hace necesario colocar un nop despues de cada instrucción de este tipo, para garantizar que se alcanza a realizar la escritura en el PSR. Se debe organizar tanto el save como el restore ya que ambos deben usar como registros fuente los de la ventana vieja y debe guardar el resultado en el rd de la nueva ventana. Actualmente todo lo hace sobre la nueva ventana.
+
 NOTA:
 Se presenta un problema de escritura indebida en el registerFile cuando el writeEnable cambia a 1,
 se está escribiendo inmediatamente el dataOut al RF donde esté indicando rd.
