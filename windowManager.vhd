@@ -32,7 +32,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 --use UNISIM.VComponents.all;
 
 entity windowManager is
-    Port ( 
+    Port ( --clk : in STD_LOGIC;
 			  op : in STD_LOGIC_VECTOR (1 downto 0);
 			  op3 : in STD_LOGIC_VECTOR (5 downto 0);
 			  cwp : in STD_LOGIC_VECTOR (1 downto 0);
@@ -54,16 +54,17 @@ begin
 	registroO7 <= auxRegistroO7(5 downto 0);
 	process(registerSource1,registerSource2,registerDestination,cwp,op,op3)
 	begin
-		if(op = "10" and op3 = "111100")then
-			ncwp <= conv_std_logic_vector(conv_integer(cwp) - 1,2);
-		else
-			if(op = "10" and op3 = "111101")then
-				ncwp <= conv_std_logic_vector(conv_integer(cwp) + 1,2);
-				else
-					ncwp <= cwp;
+		--if(rising_edge(clk))then
+			if(op = "10" and op3 = "111100")then--SAVE
+				ncwp <= conv_std_logic_vector(conv_integer(cwp) - 1,2);
+			else
+				if(op = "10" and op3 = "111101")then--RESTORE
+					ncwp <= conv_std_logic_vector(conv_integer(cwp) + 1,2);
+					--else
+						--ncwp <= cwp;
+				end if;
 			end if;
-		end if;
-	
+		
 		if(registerSource1>="00000" and registerSource1<="00111") then
 			registerSource1Integer <= conv_integer(registerSource1);
 		else
@@ -117,6 +118,7 @@ begin
 				end if;
 			end if;
 		end if;
+		--end if; --- process del clk ojo
 	end process;
 	newRegisterSource1 <= conv_std_logic_vector(registerSource1Integer, 6);
 	newRegisterSource2 <= conv_std_logic_vector(registerSource2Integer, 6);

@@ -84,6 +84,7 @@ architecture arqSparcV8 of sparcV8 is
 	
 	COMPONENT windowManager
 	PORT(
+		--clk : in STD_LOGIC;
 		op : IN std_logic_vector(1 downto 0);
 		op3 : IN std_logic_vector(5 downto 0);
 		cwp : IN std_logic_vector(1 downto 0);
@@ -280,6 +281,7 @@ begin
 		);
 
 		Inst_windowManager: windowManager PORT MAP(
+			--clk => clk,
 			op => instruccion(31 downto 30),
 			op3 => instruccion(24 downto 19),
 			cwp => PSRCWPToWindowManager,

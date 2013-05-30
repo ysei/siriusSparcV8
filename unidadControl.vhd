@@ -246,6 +246,24 @@ begin
 								ALUOP <= "000101";
 								enableMem <= '1';
 							
+							when "111100" => -- SAVE
+								pcSource <= "11"; -- Se salta a PC + 4
+								wrEnRF <= '1'; -- Se guarda en el Register File el valor de la Operacion
+								rfSource <= "01"; -- Debe ser el resultado de la operacion
+								rfDest <= '0'; -- No importa este Valor pues no se permitira escritura en el Register File
+								wrEnMem <= '0'; -- El dato es leido de memoria pero no se toma en cuenta
+								ALUOP <= "000000"; -- El save es igual a un add pero modifica CWP
+								enableMem <= '1';
+								
+							when "111101" => -- RESTORE
+								pcSource <= "11"; -- Se salta a PC + 4
+								wrEnRF <= '1'; -- Se guarda en el Register File el valor de la Operacion
+								rfSource <= "01"; -- Debe ser el resultado de la operacion
+								rfDest <= '0'; -- No importa este Valor pues no se permitira escritura en el Register File
+								wrEnMem <= '0'; -- El dato es leido de memoria pero no se toma en cuenta
+								ALUOP <= "000000"; -- El restore es igual a un add pero modifica CWP
+								enableMem <= '1';
+							
 							when others => -- Implementar demas instrucciones
 								pcSource <= "11"; -- Se salta a PC + 4
 								wrEnRF <= '0'; -- Se guarda en el Register File el valor de la Operacion
