@@ -196,7 +196,7 @@ begin
 							rfSource <= "01"; -- Debe ser el resultado de la operacion
 							rfDest <= '0'; -- No importa este Valor pues no se permitira escritura en el Register File
 							wrEnMem <= '0'; -- El dato es leido de memoria pero no se toma en cuenta
-							ALUOP <= "100000";
+							ALUOP <= "111111";
 							enableMem <= '1';
 						end if;
 					end if;

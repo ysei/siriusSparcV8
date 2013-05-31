@@ -14,7 +14,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="12" />
+   <WVObjectSize size="10" />
    <wvobject fp_name="/tbsparcv8/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -33,50 +33,30 @@
       <obj_property name="ObjectShortName">programcounter[31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tbsparcv8/uut/Inst_windowManager/cwp" type="array" db_ref_id="1">
+   <wvobject fp_name="/tbsparcv8/uut/Inst_windowManager/registroo7" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">registroo7[5:0]</obj_property>
+      <obj_property name="ObjectShortName">registroo7[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbsparcv8/uut/Inst_PSR/cwp" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">cwp[1:0]</obj_property>
       <obj_property name="ObjectShortName">cwp[1:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbsparcv8/uut/Inst_PSR/ncwp" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ncwp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ncwp[1:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tbsparcv8/uut/Inst_windowManager/ncwp" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">ncwp[1:0]</obj_property>
       <obj_property name="ObjectShortName">ncwp[1:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tbsparcv8/uut/Inst_registerFile/registersource1" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">registersource1[5:0]</obj_property>
-      <obj_property name="ObjectShortName">registersource1[5:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tbsparcv8/uut/Inst_registerFile/registersource2" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">registersource2[5:0]</obj_property>
-      <obj_property name="ObjectShortName">registersource2[5:0]</obj_property>
+   <wvobject fp_name="/tbsparcv8/uut/Inst_registerFile/registers[15]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[15]</obj_property>
+      <obj_property name="ObjectShortName">registers[15]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tbsparcv8/uut/Inst_registerFile/registers[8]" type="array" db_ref_id="1">
-      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">[8]</obj_property>
       <obj_property name="ObjectShortName">registers[8]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="label">o0</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tbsparcv8/uut/Inst_registerFile/registers[9]" type="array" db_ref_id="1">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">[9]</obj_property>
-      <obj_property name="ObjectShortName">registers[9]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="label">o1</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tbsparcv8/uut/Inst_registerFile/registers[1]" type="array" db_ref_id="1">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">[1]</obj_property>
-      <obj_property name="ObjectShortName">registers[1]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="label">g1</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tbsparcv8/uut/Inst_registerFile/registers[24]" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">[24]</obj_property>
-      <obj_property name="ObjectShortName">registers[24]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>

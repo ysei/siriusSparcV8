@@ -59,9 +59,7 @@ begin
 				AluResult <= operando1 - operando2;
 			when "000101" => -- subcc
 				AluResult <= operando1 - operando2;
-			when "100000" => --nop
-				AluResult <= (others=>'0');
-			when others =>
+			when others => -- Cae el nop
 				AluResult <= (others=>'0');
 		end case;
 	end process;

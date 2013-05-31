@@ -39,7 +39,7 @@ entity windowManager is
 			  registerSource1 : in  STD_LOGIC_VECTOR (4 downto 0);
            registerSource2 : in  STD_LOGIC_VECTOR (4 downto 0);
            registerDestination : in  STD_LOGIC_VECTOR (4 downto 0);
-			  ncwp : out STD_LOGIC_VECTOR (1 downto 0);
+			  ncwp : out STD_LOGIC_VECTOR (1 downto 0):="00";
            newRegisterSource1 : out  STD_LOGIC_VECTOR (5 downto 0);
            newRegisterSource2 : out  STD_LOGIC_VECTOR (5 downto 0);
            newRegisterDestination : out  STD_LOGIC_VECTOR (5 downto 0);
@@ -50,8 +50,8 @@ architecture Behavioral of windowManager is
 	signal registerSource1Integer,registerSource2Integer,registerDestinationInteger: integer range 0 to 39:=0;
 	signal auxRegistroO7 : std_logic_vector(6 downto 0);
 begin	
-	auxRegistroO7 <= cwp * "10000";
-	registroO7 <= auxRegistroO7(5 downto 0);
+	auxRegistroO7 <= cwp * "10000";--OJO en lugar de "00" debe ir cwp
+	registroO7 <= auxRegistroO7(5 downto 0) + "001111";
 	process(registerSource1,registerSource2,registerDestination,cwp,op,op3)
 	begin
 		--if(rising_edge(clk))then
