@@ -264,6 +264,15 @@ begin
 								ALUOP <= "000000"; -- El restore es igual a un add pero modifica CWP
 								enableMem <= '1';
 							
+							when "111000" => -- JMPL
+								pcSource <= "00"; -- Se salta a la dirección calculada.
+								wrEnRF <= '1'; -- Se guarda en el Register File el valor del PC
+								rfSource <= "10"; -- Debe ser el valor del PC
+								rfDest <= '0'; -- Debe ser el valor de nRD
+								wrEnMem <= '0'; -- El dato es leido de memoria pero no se toma en cuenta
+								ALUOP <= "000000"; -- Se deben sumar los dos operandos que entren a la ALU que determinan la dirección del salto
+								enableMem <= '1';
+							
 							when others => -- Implementar demas instrucciones
 								pcSource <= "11"; -- Se salta a PC + 4
 								wrEnRF <= '0'; -- Se guarda en el Register File el valor de la Operacion
